@@ -46,5 +46,5 @@ jobs:
         script: |
           cd ${{ secrets.EC2_PATH }}
           pkill gunicorn || true
-          cd cicd-project
-          nohup /home/ubuntu/cicd-project/venv/bin/gunicorn --bind 127.0.0.1:8000 app:app &
+          nohup /home/ubuntu/cicd-project/venv/bin/gunicorn --bind 127.0.0.1:8000 app:app > gunicorn.log 2>&1 &
+
