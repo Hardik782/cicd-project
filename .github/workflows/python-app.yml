@@ -3,6 +3,9 @@ name: Flask CI/CD to AWS EC2
 on:
   push:
     branches: [main]
+    paths:
+      - '**/*.py'
+      - '**/*.yml'
 
 jobs:
   deploy:
